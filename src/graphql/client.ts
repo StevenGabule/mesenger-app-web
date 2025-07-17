@@ -9,7 +9,6 @@ const httpLink = createHttpLink({
   uri: 'http://localhost:4000/graphql',
 });
 
-// Add authentication header
 const authLink = setContext(async (_, { headers }) => {
   const token = await AsyncStorage.getItem('authToken');
   return {
@@ -34,7 +33,6 @@ const wsLink = new GraphQLWsLink(
   })
 );
 
-// Split link to route queries/mutations through HTTP and subscriptions through WebSocket
 const splitLink = split(
   ({ query }) => {
     const definition = getMainDefinition(query);

@@ -1,7 +1,6 @@
 import { gql } from '@apollo/client';
 import { MESSAGE_FRAGMENT } from './fragments';
 
-// Subscribe to new messages
 export const MESSAGE_SUBSCRIPTION = gql`
   subscription OnMessageReceived {
     messageReceived {
@@ -11,7 +10,6 @@ export const MESSAGE_SUBSCRIPTION = gql`
   ${MESSAGE_FRAGMENT}
 `;
 
-// Subscribe to new messages for a specific user
 export const USER_MESSAGE_SUBSCRIPTION = gql`
   subscription OnUserMessageReceived($userId: ID!) {
     messageReceived(userId: $userId) {
@@ -21,7 +19,6 @@ export const USER_MESSAGE_SUBSCRIPTION = gql`
   ${MESSAGE_FRAGMENT}
 `;
 
-// Subscribe to typing indicators (optional)
 export const TYPING_SUBSCRIPTION = gql`
   subscription OnUserTyping($userId: ID!) {
     userTyping(userId: $userId) {
@@ -31,7 +28,6 @@ export const TYPING_SUBSCRIPTION = gql`
   }
 `;
 
-// Subscribe to user online status (optional)
 export const USER_STATUS_SUBSCRIPTION = gql`
   subscription OnUserStatusChanged {
     userStatusChanged {
