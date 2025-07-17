@@ -2,6 +2,8 @@
 
 This repository contains the backend for a simple, real-time chat application built using GraphQL, showcasing its capabilities for modern application development.
 
+[![Watch the Demo](assets/loom-video-demo.png)](https://www.loom.com/share/1c786d4aeefb4634a5daaba1d8bedcf4?sid=4b5b3572-c79f-4ccb-ba4e-f49cd446ef76)
+
 ## Live Endpoint
 The server is available at:  
 [http://178.128.61.160:4000/graphql](http://178.128.61.160:4000/graphql)
